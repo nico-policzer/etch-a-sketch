@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 2px dotted green;
+}
+
+.pix {
+    border: 2px dotted blue;
+    flex: 1;
+}
+
+.row {
+    border: 2px solid red;
+    display: flex;
+    flex: 1;
+    
+}
