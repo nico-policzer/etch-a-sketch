@@ -14,20 +14,17 @@ html {
     width: 500px;
     display: flex;
     flex-direction: column;
-    border: 2px dotted green;
+    border: 4px solid gray;
+    border-radius: 5px;
 }
 
 .pix {
-    /* border: 2px dotted blue; */
     flex: 1;
 }
 
 .row {
-    /* border: 2px solid red; */
     display: flex;
     flex: 1;
     
 }
-/* .pix:hover {
-    background-color: blue;
-} */
+
