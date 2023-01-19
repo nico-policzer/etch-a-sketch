@@ -2,6 +2,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+html {
+    height: 100%;
 }
 
 .frame {
@@ -13,13 +18,16 @@ body {
 }
 
 .pix {
-    border: 2px dotted blue;
+    /* border: 2px dotted blue; */
     flex: 1;
 }
 
 .row {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex: 1;
     
 }
+/* .pix:hover {
+    background-color: blue;
+} */
