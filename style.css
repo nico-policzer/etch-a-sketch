@@ -10,8 +10,8 @@ html {
 }
 
 .frame {
-    height: 500px;
     width: 500px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     border: 4px solid gray;
