@@ -11,23 +11,32 @@ document.onmouseup = function() {
     window.mouseDown = false;
 }
 
-if (x>100) {
-    x = 100;
-}
-for (i=0; i < x; i++) {
-    let row = document.createElement('div');
-    row.classList.add('row');
-    for (j=0; j < x; j++) {
-        let pix = document.createElement("div");
-        pix.classList.add("pix");
-        pix.addEventListener('mouseover', () => changeColor(pix))
-        row.appendChild(pix);
+
+function renderCanvas(x) {
+    clearCanvas();
+    if (x>100) {
+        x = 100;
     }
-
-    canvas.appendChild(row);
-
+    for (i=0; i < x; i++) {
+        let row = document.createElement('div');
+        row.classList.add('row');
+        for (j=0; j < x; j++) {
+            let pix = document.createElement("div");
+            pix.classList.add("pix");
+            pix.addEventListener('mouseover', () => changeColor(pix))
+            row.appendChild(pix);
+        }
+        canvas.appendChild(row);
+    }    
 }
 
+renderCanvas(x);
+
+function clearCanvas() {
+    while(canvas.firstChild) {
+        canvas.removeChild(canvas.lastChild);
+    }
+}
 function getColor() {
     return document.querySelector("input").value;
 }
