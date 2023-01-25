@@ -1,5 +1,6 @@
-const frame = document.querySelector(".frame");
+const canvas = document.querySelector(".canvas");
 let x = prompt("Size of canvas?");
+let color = "#" + Math.floor(Math.random()*16777215).toString(16);
 
 
 window.mouseDown = false;
@@ -23,13 +24,17 @@ for (i=0; i < x; i++) {
         row.appendChild(pix);
     }
 
-    frame.appendChild(row);
+    canvas.appendChild(row);
 
+}
+
+function getColor() {
+    return document.querySelector("input").value;
 }
 function changeColor(pix) {
    // pix.style.backgroundColor = "black";
     if (window.mouseDown) {
-        pix.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);;
+        pix.style.backgroundColor = getColor();;
     }
 
 }
